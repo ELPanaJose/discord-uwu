@@ -13,7 +13,7 @@ async def on_message(message):
         return
 
     if message.content.startswith('peo'):
-        await message.channel.send('mujer que veo mujer que morboseo :smiling_imp:')
+        await message.channel.send('uwu :smiling_imp:')
 
     if message.content.startswith('chill'):
         await message.channel.send('chill')
