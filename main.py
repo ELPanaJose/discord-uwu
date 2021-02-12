@@ -25,7 +25,6 @@ async def on_message(message):
              await message.channel.send(emojis)
              await message.channel.send(gifs)
 
-
     if message.content.startswith('!sr'):
           exit(print("raid over"))
          
