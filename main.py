@@ -32,28 +32,26 @@ async def on_message(message):
 
     neofetch = ("""
            ```py
-
-                pai@pai-hplaptop14cm0xxx 
-                ------------------------ 
-                OS: Ubuntu 20.04.2 LTS x86_64 
-                Host: HP Laptop 14-cm0xxx 
-                Kernel: 5.4.0-65-generic 
-                Uptime: 12 hours, 28 mins 
-                Packages: 2474 (dpkg), 17 (snap) 
-                Shell: zsh 5.8 
-                Resolution: 1366x768 
-                DE: GNOME 
-                WM: Mutter 
-                WM Theme: Adwaita 
-                Theme: Yaru-ark [GTK2/3] 
-                Icons: BigSur-black [GTK2/3] 
-                Terminal Font: Roboto Mono for Powerline Bold Italic 14 
-                CPU: AMD A6-9225 RADEON R4 2C+3G (2) @ 2.600GHz 
-                GPU: AMD ATI Radeon R2/R3/R4/R5 Graphics 
-                Memory: 2955MiB / 3817MiB 
+                                   u0_a138@localhost
+          +hydNNNNdyh+             -----------------
+        +mMMMMMMMMMMMMm+           OS: Android 9 armv7l
+      dMMm:NMMMMMMN:mMMd           Host: motorola moto e6 play
+      hMMMMMMMMMMMMMMMMMMh         Kernel: 4.4.146+
+  ..  yyyyyyyyyyyyyyyyyyyy  ..     Uptime: 26 days, 18 hours, 5
+.mMMmMMMMMMMMMMMMMMMMMMMMmMMm.     Packages: 133 (dpkg), 1 (pkg
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:   Shell: bash 5.1.4
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:   CPU: MT6739WW (4) @ 1.495GHz
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:   Memory: 1164MiB / 1862MiB
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-
+ +yy+ MMMMMMMMMMMMMMMMMMMM +yy+
+      mMMMMMMMMMMMMMMMMMMm
+      /++MMMMh++hMMMM++/
+          MMMMo  oMMMM
+          MMMMo  oMMMM
+          oNMm-  -mMNs
           
-                                                                  
-                           ```
+                       ```
 	    """)
 
     if message.content.startswith('!neofetch'):
