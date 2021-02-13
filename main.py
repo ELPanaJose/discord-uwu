@@ -6,7 +6,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
-
+ 
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -30,32 +30,37 @@ async def on_message(message):
     if message.content.startswith('!sr'):
           exit(print("raid over"))
 
- 
-    cpu =  ("""
-
-             
-            ```py
-
-
-            ```
-
-
-         """)
-
-
-    if message.content.startswith('!cpu'):
-    	await message.channel.send(cpu)
-
-    gpu = ("""
+    neofetch = ("""
            ```py
 
-
-
-           ```
-	
+                pai@pai-hplaptop14cm0xxx 
+                ------------------------ 
+                OS: Ubuntu 20.04.2 LTS x86_64 
+                Host: HP Laptop 14-cm0xxx 
+                Kernel: 5.4.0-65-generic 
+                Uptime: 12 hours, 28 mins 
+                Packages: 2474 (dpkg), 17 (snap) 
+                Shell: zsh 5.8 
+                Resolution: 1366x768 
+                DE: GNOME 
+                WM: Mutter 
+                WM Theme: Adwaita 
+                Theme: Yaru-ark [GTK2/3] 
+                Icons: BigSur-black [GTK2/3] 
+                Terminal Font: Roboto Mono for Powerline Bold Italic 14 
+                CPU: AMD A6-9225 RADEON R4 2C+3G (2) @ 2.600GHz 
+                GPU: AMD ATI Radeon R2/R3/R4/R5 Graphics 
+                Memory: 2955MiB / 3817MiB 
+          
+                                                                  
+                           ```
 	    """)
 
-    if message.content.startswith('!gpu'):
-    	await message.channel.send(gpu)
+    if message.content.startswith('!neofetch'):
+    	await message.channel.send(neofetch)
 
-client.run('token')
+
+
+
+         
+client.run('')
