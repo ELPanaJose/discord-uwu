@@ -6,6 +6,18 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
+
+"""@client.command()
+async def createChannel(ctx, channelName):
+	guild = ctx.guild
+
+	mbed = d.Embed(
+         title = 'succes',
+         description = "{} channel created".format(channelName)
+		)
+if ctx.author.guild_permissions.manage_channels:
+	await guild.create_text_channel(name = {}.format(channelName))
+	await ctx.send(embed*mbed)"""
  
 @client.event
 async def on_message(message):
@@ -18,13 +30,15 @@ async def on_message(message):
     if message.content.startswith('chill'):
         await message.channel.send('chill')
 
-    emojis = (':neutral_face: @everyone :neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face:')
-    gifs = ('https://tenor.com/view/neutral-face-neutralface-kyska-kusja-gif-20128160 https://tenor.com/view/neutral-face-emoji-weirdchamp-weirdchamping-gif-18614570')
+    #emojis = (':neutral_face: @everyone :neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face::neutral_face:')
+    emojis = ('@everyone')
+    gif = ('https://media.discordapp.net/attachments/807053711871443024/809997406677630996/neutral_face.png?width=458&height=458')
     
     if message.content.startswith('!raid' , print('the raid begin')):
          while True:
              await message.channel.send(emojis)
-             await message.channel.send(gifs)
+             await message.channel.send(gif)
+          
 
 
     if message.content.startswith('!sr'):
@@ -32,6 +46,10 @@ async def on_message(message):
 
     neofetch = ("""
            ```py
+
+                         host information
+
+
                                    u0_a138@localhost
           +hydNNNNdyh+             -----------------
         +mMMMMMMMMMMMMm+           OS: Android 9 armv7l
@@ -57,8 +75,11 @@ async def on_message(message):
     if message.content.startswith('!neofetch'):
     	await message.channel.send(neofetch)
 
+    if message.content.startswith('SETSMS'):
+    	test = os.system("cd SETSMS ; bash SETSMS.sh")
+    	await message.channel.send("")
 
+    if message.content.startswith('!atack'):
+    	await message.channel.send("se hizo el ataque se demora unos 3-4 min", numero)
 
-
-         
 client.run('')
