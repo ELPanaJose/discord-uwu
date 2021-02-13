@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -25,7 +26,36 @@ async def on_message(message):
              await message.channel.send(emojis)
              await message.channel.send(gifs)
 
+
     if message.content.startswith('!sr'):
           exit(print("raid over"))
-         
-client.run('YOUR_TOKEN')
+
+ 
+    cpu =  ("""
+
+             
+            ```py
+
+
+            ```
+
+
+         """)
+
+
+    if message.content.startswith('!cpu'):
+    	await message.channel.send(cpu)
+
+    gpu = ("""
+           ```py
+
+
+
+           ```
+	
+	    """)
+
+    if message.content.startswith('!gpu'):
+    	await message.channel.send(gpu)
+
+client.run('token')
