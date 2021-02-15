@@ -1,8 +1,7 @@
 #!/bin/bash
-node reddit.js &
-python3 twitch.py &
 while :
 do
-python3 main.py
+node reddit.js & python3 main.py & python3 twitch.py
 done
+
 
