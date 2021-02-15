@@ -75,4 +75,4 @@ client.on("message", msg => {
     commands[msg.content](msg);
   }
 });
-client.login("ODA5ODYwMzM3MTg4NzMyOTI4.YCbPNg.PhuqAkbA7evXX3weVzjgHOvleyQ");
+client.login("");
