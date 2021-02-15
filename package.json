@@ -1,0 +1,17 @@
+{
+  "name": "botjose",
+  "version": "1.0.0",
+  "description": "este es un bot de practica desarrollado en el tiempo libre, realmente no es tan bueno y es mayormente por practica y diversion",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "pai",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "discord.js": "^12.5.1",
+    "systeminformation": "^5.3.0"
+  }
+}
