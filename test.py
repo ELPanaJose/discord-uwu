@@ -10,7 +10,7 @@ async def ping(ctx):
 # Event
 @bot.event
 async def on_ready():
-   await bot.change_presence(activity=discord.Streaming(name="monda", url="https://twitch.tv/monda"))
+   await bot.change_presence(activity=discord.Streaming(name="elpanajose.ga", url="https://twitch.tv/monda"))
    print('bruh')
 
 bot.run('')
