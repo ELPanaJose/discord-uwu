@@ -1,2 +1,1 @@
-# discord-uwu
-a discord bot uwu
+a bot in development
