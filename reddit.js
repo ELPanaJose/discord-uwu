@@ -5,9 +5,9 @@ const linkMemes = [
   "https://www.reddit.com/r/DylanteroYT/hot/",
   "https://www.reddit.com/r/MAAU/hot/",
   "https://www.reddit.com/r/DylanteroYT/top/",
-  "https://www.reddit.com/r/Colombia/hot/",
-  "https://www.reddit.com/r/Colombia/new/",
-  "https://www.reddit.com/r/Colombia/top/"
+  "https://www.reddit.com/r/linuxmemes/hot",
+  "https://www.reddit.com/r/linuxmemes/new",
+  "https://www.reddit.com/r/linuxmemes/top"
 ];
 
 Object.defineProperty(Array.prototype, "flat", {
