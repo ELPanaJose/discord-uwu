@@ -25,7 +25,7 @@ Object.defineProperty(Array.prototype, "flat", {
 var img = [];
 const Discord = require("discord.js");
 const axios = require("axios");
-const cheerio = require("cheerio"); 
+const cheerio = require("cheerio");
 
 const client = new Discord.Client(),
   commands = {
@@ -48,23 +48,9 @@ const client = new Discord.Client(),
         .setImage(img[Math.floor(Math.random() * img.length)]);
       msg.channel.send(exampleEmbed);
     },
-    "*bruh": msg => {
-      msg.channel.send(":flushed:");
-      msg.channel.send("<:typescript:791822787689971772>")
-      msg.channel.send("https://media.giphy.com/media/VIOkcgpsnA2Zy/200.gif");
-    },
     "*cm": async function(msg) {
       msg.channel.send(`la cantidad de memes es :${img.length}`);
     },
-
-    "*monda": async function(msg) {
-      msg.channel.send("El pana brother jorge floyd todo un idolo  :bruh:");
-      msg.channel.send("https://www.youtube.com/watch?v=IRZWiqBHYaY");
-      msg.channel.send(
-        "https://ichef.bbci.co.uk/news/640/cpsprodpb/8862/production/_112541943_whatsubject.jpg"
-      );
-    },
-    
   };
 
 client.on("ready", () => {
