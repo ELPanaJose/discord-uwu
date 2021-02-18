@@ -1,5 +1,3 @@
-
-
 ayuda = ("""```py
 
 *chill = chill como siempre
@@ -16,15 +14,12 @@ ayuda = ("""```py
 ( for now the bot is only in spanih, but in
 a future it will be memes in english :D)
 
-*monda de solo puro momo
-
-*bruh : bruh
-
 *nm para agregar nuevos memes
 
 *cm solo te da informacion de cuantos memes tienes
 
 *meme solo te da un meme
+
             ```""")
 
 numero = ("+573222222222")
