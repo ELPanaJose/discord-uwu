@@ -1,10 +1,10 @@
 {
-  "name": "botjose",
+  "name": "peobot_solo_memes",
   "version": "1.0.0",
-  "description": "este es un bot de practica desarrollado en el tiempo libre, realmente no es tan bueno y es mayormente por practica y diversion",
-  "main": "server.js",
+  "description": "a simple bot",
+  "main": "bot.js",
   "scripts": {
-    "start": "node server.js"
+    "start" : "node bot.js"
   },
   "author": "pai",
   "license": "ISC",
