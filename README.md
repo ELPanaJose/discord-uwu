@@ -4,5 +4,5 @@
 
 <h2>I made this bot with the help of ranon to send us memes geeks, linux and programming memes things, it has some bugs but it's pretty cool</h2>
 
-## 👏 Iff you want to use it!
+## 👏 If you want to use it!
 **To start using peo [just click on this link](https://discord.com/api/oauth2/authorize?client_id=809860337188732928&permissions=51200&scope=bot) and add it to your server!**
