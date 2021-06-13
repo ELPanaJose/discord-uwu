@@ -1,53 +1,39 @@
-const linkMemes = [
+require("dotenv").config();
+const Discord = require("discord.js");
+const axios = require("axios");
+const cheerio = require("cheerio");
+
+
+const linkMemes = [ // the links where is going to scrap
   "https://www.reddit.com/r/MAAU/top/",
   "https://www.reddit.com/r/DylanteroYT/hot/",
   "https://www.reddit.com/r/linuxmemes/hot",
   "https://www.reddit.com/r/linuxmemes/new/",
   "https://www.reddit.com/r/linuxmemes/top/",
-  "https://www.reddit.com/r/shitposting/top/",
-  "https://www.reddit.com/r/shitposting/new/",
-  "https://www.reddit.com/r/shitposting/hot/",
   "https://www.reddit.com/r/ProgrammerHumor/hot/",
   "https://www.reddit.com/r/ProgrammerHumor/new/",
   "https://www.reddit.com/r/ProgrammerHumor/top/",
   "https://www.reddit.com/r/MAAU/hot/",
-  "https://www.reddit.com/r/MAAU/new/"
+  "https://www.reddit.com/r/MAAU/new/",
 ];
 
-var ayuda =
-  "```*nm = nuevo meme\n*meme = te da un meme\n*cm = cantidad de memes```";
-
 var img = [];
-const Discord = require("discord.js");
-const axios = require("axios");
-const cheerio = require("cheerio");
 
 const client = new Discord.Client(),
   commands = {
-    "*nm": async function (msg) {
-      msg.channel.send("se busco un nuevo meme");
+    "*meme": async function (msg) {
+      let embed = new Discord.MessageEmbed()
+        .setTitle("meme")
+        .setImage(img[Math.floor(Math.random() * img.length)]); 
+      msg.channel.send(embed); // send the embed with the image
       linkMemes.map((i) => {
-        axios.get(i).then((r) => {
+        axios.get(i).then((r) => { // here is making the request
           let $ = cheerio.load(r.data);
-          $("._2_tDEnGMLxpM6uOa2kaDB3").each((i, e) => {
+          $("._2_tDEnGMLxpM6uOa2kaDB3").each((i, e) => { // the html property of the reddit page
             img.push($(e).attr("src"));
           });
         });
       });
-    },
-    "*meme": async function (msg) {
-      let exampleEmbed = new Discord.MessageEmbed()
-        .setTitle(
-          ":regional_indicator_b: :regional_indicator_r:  :regional_indicator_u: :regional_indicator_h:"
-        )
-        .setImage(img[Math.floor(Math.random() * img.length)]);
-      msg.channel.send(exampleEmbed);
-    },
-    "*cm": async function (msg) {
-      msg.channel.send(`la cantidad de memes es :${img.length}`);
-    },
-    "*help": async function (msg) {
-      msg.channel.send(ayuda);
     },
   };
 
@@ -59,4 +45,4 @@ client.on("message", (msg) => {
     commands[msg.content](msg);
   }
 });
-client.login("");
+client.login(process.env.TOKEN); // login with the env
